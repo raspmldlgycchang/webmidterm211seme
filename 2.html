@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="speedup"></p>
+    <p id="speeddown"></p>
+    <script>
+        var car=new Object();
+        car.name='Sonata';
+        car.speed=50;
+        car.color='white';
+        car.speedup=function(){
+            return this.speed+10;
+        };
+        car.speeddown=function(speed){
+            return speed-20;
+        };
+        var cspeed=document.getElementById("speedup");
+        cspeed.textContent='속도증가:'+car.speedup();
+        
+        var cspeed_=document.getElementById("speeddown");
+        cspeed_.textContent='속도감소:'+car.speeddown(20);
+    </script>
+</body>
+</html>

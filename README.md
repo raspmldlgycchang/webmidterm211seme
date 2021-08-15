@@ -1,0 +1,1 @@
+# Not included jquery-3.6.0.min.js but using jQUery cdn on googling

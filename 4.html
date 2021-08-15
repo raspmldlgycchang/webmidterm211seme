@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="speedup"></p>
+    <p id="speeddown"></p>
+    <p id="color"></p>
+    <p id="price"></p>
+    <script>
+        function Car(name, color, speed){
+            this.name=name;
+            this.color=color;
+            this.speed=speed;
+            this.speedup=function(){
+                return this.speed+10;
+            };
+            this.speeddown=function(){
+                return this.speed-20;
+            };
+        };
+        var car = new Car('Sonata', 'white', 50);
+        car.price='3천만원';
+        delete car.color;
+
+        var cspeed=document.getElementById("speedup");
+        cspeed.textContent=car.speedup();
+        
+        var cspeed_=document.getElementById("speeddown");
+        cspeed_.textContent=car.speeddown();
+    
+        var ccolor=document.getElementById("color");
+        ccolor.textContent=car.color;
+
+        var cprice=document.getElementById("price");
+        cprice.textContent=car.price;
+    </script>
+</body>
+</html>
